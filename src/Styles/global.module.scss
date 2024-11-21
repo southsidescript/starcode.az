@@ -1,0 +1,222 @@
+//pages
+.home{
+     
+
+        
+    
+    background-color: #101011;
+
+      & main{
+       width: 100vw;
+       height: 100vh;
+       background-color: #101011;
+      }
+
+}
+
+.header{
+    width: 100vw;
+    display: flex;
+    background-color: #10101175;
+    backdrop-filter: blur(10px);
+    justify-content:space-evenly;
+    align-items: center;
+    height: 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    border-radius: 0px 0px 15px 15px;
+    border-bottom: 1px solid rgb(102, 0, 146);
+     z-index: 1000;
+ 
+   &_logo{
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    
+    font-family: "Doto", monospace;
+    
+    background-image: linear-gradient(90deg, rgb(216, 202, 0), rgb(44, 1, 236)); /* ваш градиент */
+    background-clip: text;
+     color: transparent;
+    
+& div{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+& img{
+  animation: rotate 3s infinite linear;
+}
+
+    &::first-letter{
+        color:rgb(180, 8, 109);
+        
+    }
+   
+   } 
+
+
+   &_nav{
+    font-family: 'Arial';
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    width:18vw;
+    
+    color: white;
+     & ul{
+
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+         
+        & a{
+            color: white;
+         
+        }
+     }
+   }
+
+   &_btn{
+    width: 120px;
+    height: 40px;
+    background: none;
+    font-size: 11px;
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 7px;
+     
+    transition: all .37s ease;
+    &:hover{
+      transform: translateY(-5px);
+      cursor: pointer;
+      background-color: whitesmoke;
+      color: black;
+    }
+
+    border-radius: 12px;
+    box-shadow: 0 0 15px;
+    animation: gradient-border 7s infinite alternate; 
+
+
+     box-shadow: 0px 0px 10px rgb(0, 0, 226);
+    text-transform: uppercase;
+   }
+
+
+    
+  }
+
+  .main{
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;   
+    background-image: url('/elements/2k_stars_milky_way.jpg');
+    background-size: cover;
+    background-position: 0 94%;
+    background-repeat: no-repeat;
+
+
+   &_home_title{
+    animation: blink 3s 1;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+   font-family: 'Orbitron',sans-serif;
+    font-weight: 300;
+    font-size: 38px;
+     text-align: center;
+    width: 50vw;
+     filter: drop-shadow(0px 10px 5px black);
+    
+
+   }
+
+  }
+
+
+
+
+
+//Components
+
+.planet{
+  position: absolute;
+  left: calc(50% - 683px);
+
+
+   & img{
+    filter: drop-shadow(0px 0px 10px rgb(71, 71, 255) );
+   }
+}
+
+
+.btn_primary{
+  position: absolute;
+  top: 20%;
+  left: calc(50% - 90px);
+  width: 180px;
+  height: 50px;
+  border: none;
+  font-weight: bold;
+  font-family: 'Play';
+  
+  background: linear-gradient(120deg,orange,blue);
+  color: white;
+  box-shadow: 0px 0px 10px white;
+  opacity: 0.5;
+  // clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+  border-radius:5px 15px 5px 15px;
+  outline: none;
+ transition: all .3s ease;
+ 
+  &:hover{
+    opacity: 1;
+    transform: translateY(-15px);
+    background: blue;
+    cursor: crosshair;
+  }
+}
+
+
+//Loading
+
+
+
+
+@keyframes blink{
+  0%{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+
+
+@keyframes gradient-border {
+  0% {  box-shadow: 0 0 15px rgb(8, 8, 75); }
+  25% {  box-shadow: 0 0 15px rgb(55, 55, 235); }
+  50% {  box-shadow: 0 0 15px rgb(230, 230, 255); }
+  75% {  box-shadow: 0 0 15px rgb(238, 222, 2); }
+  100% {  box-shadow: 0 0 15px blue; }
+}
+
+
+
