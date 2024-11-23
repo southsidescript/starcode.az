@@ -7,7 +7,7 @@ export const Context = createContext();
 
 
 
-const contextProvider=({children})=>{
+const ContextProvider=({children})=>{
   
     const [theme,setTheme] = useState('default');
 
@@ -17,7 +17,7 @@ const contextProvider=({children})=>{
 
 
 
-export default createContext;
+export default ContextProvider;
 
 
 
